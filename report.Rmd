@@ -1,6 +1,6 @@
 ---
 title: "Cross-linked metagenomics data analysis of the rice straw degradation process unveils MAGs with the potential to decompose ligno-cellulosic material in 30 days"
-author: "J. Yepes-García, N. Novoa-Montenegro, V. Otero-Jiménez, D. Uribe-Vélez, E. Barreto-Hernández, L. Falquet"
+author: "Jeferyd Yepes-Garcíaa, Nicolás Novoa-Montenegro, Vanessa Otero-Jiménez, Daniel Uribe-Vélez, Emiliano Barreto-Hernández, Laurent Falquet"
 date: "December, 2024"
 output: 
     rmdformats::downcute:
@@ -16,6 +16,18 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
+
+**Department of Biology**, University of Fribourg, Fribourg, Canton of Fribourg, 1700, Switzerland
+
+**Swiss Institute of Bioinformatics**, Lausanne, Vaud, 1015, Switzerland
+
+**Agricultural Microbiology Group**, Biotechnology Institute, Universidad Nacional de Colombia, A.A 14-490, Bogotá D.C., Colombia
+
+**Department of Soil and Water Systems**, University of Idaho, 875 Perimeter Drive MS2340, Moscow, ID 83844-2340, United States of America
+
+**Bioinformatics group**, Biotechnology Institute, Universidad Nacional de Colombia, A.A 14-490, Bogotá D.C., Colombia
+
+Correspondence should be addressed to L.F (laurent.falquet@unifr.ch)
 
 # Abstract
 
