@@ -1,5 +1,5 @@
 ---
-title: "Metagenomics data analysis of the rice straw degradation process using microbial consortia"
+title: "Cross-linked metagenomics data analysis of the rice straw degradation process unveils MAGs with the potential to decompose ligno-cellulosic material in 30 days"
 author: "J. Yepes-García, N. Novoa-Montenegro, V. Otero-Jiménez, D. Uribe-Vélez, E. Barreto-Hernández, L. Falquet"
 date: "December, 2024"
 output: 
@@ -17,13 +17,21 @@ knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
-# Report for publication
+# Abstract
 
-**Appreciated group members,**
+<p style='text-align: justify;'>**Background**
+Rice is one of the top three crops that contribute 60% of the calories consumed by humans worldwide. Nonetheless, extensive rice harvesting yields more than 700 tons of rice straw, a byproduct that is often difficult for farmers to manage efficiently. As a result, millions of tons of carbon dioxide and greenhouse gases are released, causing issues such as respiratory problems, soil degradation and global warming. In this work, we explore the biological decomposition of rice straw through the application of microbial consortia from a metagenomics perspective.</p>
 
-<p style='text-align: justify;'>I hereby share with you the processed results after following different approaches to analyze the data generated during the assays at field scale. The intention of this document is serve as basis to start writing the manuscript in which all the process will be documented.</p>
+<p style='text-align: justify;'>**Results**
+We applied different treatments to rice straw placed in a mulching setup at field scale, using various combinations of a Trichoderma-based commercial product, the bacterial strain Bacillus altitudinis, organic nitrogen, and a mixture of organic carbon and acids. After 30 days, we characterized the microbiome community on the surface of the material and from the soil by reconstructing and functionally annotating Metagenome-Assembled Genomes (MAGs), and comparing it with the initial microbial composition. The metagenomics data analysis allowed for the recovery of high-quality MAGs that exhibit the potential to decompose rice straw, as they possess the enzymatic machinery to metabolize the main components of the plant cell wall. Additionally, in soil samples, the MAGs with the highest potential to utilize lignocellulosic residues as carbon are grouped together under the phyla Actinomycetota and Acidobacteriota. Moreover, these experiments revealed an increase in β-glucosidase activity following treatment application, along with an improvement in the total carbon quantified in the soil; however, interestingly, in some cases, although the presence of genes related to β-glucosidase synthesis was established, no experimental activity was quantified.</p>
 
-One tip before navigate through this document:
+<p style='text-align: justify;'>**Conclusions**
+This contribution underscores the applicability of different biological strategies to convert rice straw into a more assimilable substrate. The abundance of MAGs detected with the ability to decompose rice straw indicates that the proposed treatments may trigger their activation and subsequent activity. The fact that high-quality MAGs account for the potential to metabolize rice straw, yet no experimental degradation was detected, highlights the need for further study of expression patterns in this context.<p style='text-align: justify;'>
+</p>
+
+## Graphical Abstract
+
+![](images/graphical_abstract.png){style="display: block; margin: 0 auto"}
 
 > 🚀   **Please click on the images to enlarge them.**
 
