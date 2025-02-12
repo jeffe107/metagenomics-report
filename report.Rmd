@@ -1,5 +1,5 @@
 ---
-title: "Cross-linked metagenomics data analysis of the rice straw degradation process unveils MAGs with the potential to decompose ligno-cellulosic material in 30 days"
+title: "Genome-Resolved Metagenomics Analysis of Rice Straw Degradation Experiments Unveils MAGs with High Potential to Decompose Lignocellulosic Residues"
 author: "Jeferyd Yepes-Garcíaa, Nicolás Novoa-Montenegro, Vanessa Otero-Jiménez, Daniel Uribe-Vélez, Emiliano Barreto-Hernández, Laurent Falquet"
 date: "December, 2024"
 output: 
@@ -32,13 +32,13 @@ Correspondence should be addressed to L.F (laurent.falquet@unifr.ch)
 # Abstract
 
 <p style='text-align: justify;'>**Background**
-Rice is one of the top three crops that contribute 60% of the calories consumed by humans worldwide. Nonetheless, extensive rice harvesting yields more than 700 tons of rice straw, a byproduct that is often difficult for farmers to manage efficiently. As a result, millions of tons of carbon dioxide and greenhouse gases are released, causing issues such as respiratory problems, soil degradation and global warming. In this work, we explore the biological decomposition of rice straw through the application of microbial consortia from a metagenomics perspective.</p>
+Rice is one of the top three crops that contribute 60% of the calories consumed by humans worldwide. Nonetheless, extensive rice harvesting yields more than 800 tons of rice straw (RS) per year globally, generating a byproduct that is often difficult for farmers to manage efficiently without burning it. As a result, millions of tons of carbon dioxide and greenhouse gases are released, causing issues such as respiratory problems, soil degradation and global warming. In this work, we explore the biological decomposition of RS through the application of microbial consortia from a metagenomics perspective.</p>
 
 <p style='text-align: justify;'>**Results**
-We applied different treatments to rice straw placed in a mulching setup at field scale, using various combinations of a Trichoderma-based commercial product, the bacterial strain Bacillus altitudinis, organic nitrogen, and a mixture of organic carbon and acids. After 30 days, we characterized the microbiome community on the surface of the material and from the soil by reconstructing and functionally annotating Metagenome-Assembled Genomes (MAGs), and comparing it with the initial microbial composition. The metagenomics data analysis allowed for the recovery of high-quality MAGs that exhibit the potential to decompose rice straw, as they possess the enzymatic machinery to metabolize the main components of the plant cell wall. Additionally, in soil samples, the MAGs with the highest potential to utilize lignocellulosic residues as carbon are grouped together under the phyla Actinomycetota and Acidobacteriota. Moreover, these experiments revealed an increase in β-glucosidase activity following treatment application, along with an improvement in the total carbon quantified in the soil; however, interestingly, in some cases, although the presence of genes related to β-glucosidase synthesis was established, no experimental activity was quantified.</p>
+We applied different treatments to RS placed in a mulching setup during experiments carried out in Colombian rice fields, using various combinations of a Trichoderma-based commercial product, the bacterial strain Bacillus altitudinis, organic nitrogen, and a mixture of potassium-reducing organic acids. Before inoculation and after 30 days of treatment, we characterized the microbial community on the surface of the material and from the bulk soil by performing a reference-based compositional analysis, and reconstructing and functionally annotating Metagenome-Assembled Genomes (MAGs). High-quality MAGs with great potential to decompose RS, represented by the extensive number of carbohydrate-active enzymes, were recovered. Soil MAGs taxonomic classification indicates that they may represent potential novel microbial taxa, while the main part of the RS MAGs with superior lignocellulose-degrading capacity were affiliated under Actinomycetota and Bacteroidota phyla. Moreover, the biotransformation capacity of the MAGs was indirectly verified by quantifying β-glucosidase activity of the samples they were extracted from, and an improvement on the action of this enzyme was detected, suggesting cellulose degradation by the native microbiota possibly triggered by Trichoderma sp.</p>
 
 <p style='text-align: justify;'>**Conclusions**
-This contribution underscores the applicability of different biological strategies to convert rice straw into a more assimilable substrate. The abundance of MAGs detected with the ability to decompose rice straw indicates that the proposed treatments may trigger their activation and subsequent activity. The fact that high-quality MAGs account for the potential to metabolize rice straw, yet no experimental degradation was detected, highlights the need for further study of expression patterns in this context.<p style='text-align: justify;'>
+This contribution underscores the possibility of promoting RS degradation through biological strategies by the activation of native microorganisms. Further, the newly unveiled MAGs with high RS-degrading potential provide a valuable resource for exploring the functional potential of previously uncharacterized microbial diversity in Colombian agricultural ecosystems, including microorganisms that have not been previously reported as remarkable lignocellulose decomposers.<p style='text-align: justify;'>
 </p>
 
 ## Graphical Abstract
@@ -49,7 +49,7 @@ This contribution underscores the applicability of different biological strategi
 
 # Methodology
 
-## Taxonomic profiling
+## Reference-based compositional analysis
 
 <p style='text-align: justify;'>We used Kraken2/Bracken to perform taxonomic assignment of the reads. The procedure included the remotion of reads mapping the rice genome ([O. zativa, Build_4.0](https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml)). The workflow is proposed by Lu et al. (2022) as follows (wrapped by Nextflow):</p>
 
@@ -57,77 +57,128 @@ This contribution underscores the applicability of different biological strategi
 
 <p style='text-align: justify;'>The analysis of the raw counts was developed by wrapping the output as a Phyloseq object to estimate effect of treatments and time over relative abundance, α-Diversity, β-Diversity and differentially abundant taxa.</p>
 
-## Metagenome-Assembled Genome (MAG) recovery
+## MAG recovery
 
 <p style='text-align: justify;'>nf-core/mag was implemented to build and annotate the MAGs from the raw sequences. A co-assembly/co-binning strategy was chosen as an attempt to improve the quality and resolution of the MAGs. MEGAHIT was used for the assembly, while MaxBin2 and MetaBAT2 were the selected tools for binning. A de-replication and refinement step was carried by enabling DASTool within the workflow. For the downstream analysis, the curated MAGs were analyzed with MAGFlow/BIgMAG, that includes quality-measuring tools such as CheckM2, BUSCO, GUNC and QUAST, as well as the taxonomic annotator GTDB-Tk2 relying on the database version R220. The presence of carbohydrate-related metabolism enzymes was studied through dbCAN3 along with the [CAZy](https://dbcan.readthedocs.io/en/latest/index.html) database, whilst Cluster of Orthologous Genes (COGs) were detected by COGclassifier. The selection of the MAGs was carried out using the criteria: completeness above 50% and contamination below 10%. In addition, MAGS belonging to either rice straw or soil with average differences <5% ANI were clustered using FastANI. For data visualization, Circos, iTOL and ggplot2 packages were used.</p>
 
 ![](images/mag_workflow.png){style="display: block; margin: 0 auto"}
 
-# Results Taxonomic Profiling
 
-## Relative abundance, α-Diversity and β-Diversity
+# Results MAG recovery
 
-![](images/domain_alpha_beta_pcoa_umap_permanova.png){style="display: block; margin: 0 auto"}
+## MAGs and CAZyme information
 
-> **Figure 1.** Taxonomic profiling of the sequences using Kraken2 coupled to Bracken: **a** Relative domain abundance per matrix source, merging all the replicates per sample. **b** α-Diversity, colored by Treatment, measured through Shannon and Inversed-Simpson indices. **c** Sample ordination through Principal Coordinate Analysis (PCoA) using a Bray-Curtis dissimilarity matrix as input. The ellipses represent 95% confidence regions around the centroids of each group calculated by the assumption of multivariate t-distribution. **d** Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of β-Diversity estimation of the samples based on the Aitchison distance. **e** Compositional variability of the samples, measured as distance to the centroid in a multivariate space computed with the Aitchison distance among samples. ANOVA analysis results show no significant differences in terms of group dispersion. **f** Proportion of the variance explained by the factors Time and Treatment, segmented by matrix source, in Permutational Analysis of Variance (PERMANOVA) implemented according to different distance/dissimilarity metrics. The significance of the each factor is determined by the symbol color. All the analysis from **b** to **f** were carried out only with Bacteria data and with normalized raw counts as Counts per million (CPM). The Treatment colors are transversal to plots **b**, **d**, **e** and **f**.
+![](images/Fig1.png){style="display: block; margin: 0 auto"}
 
-![](images/read_abundance_phylum_genus.png){style="display: block; margin: 0 auto"}
+> **Fig. 1. a** Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of normalized CAZy enzymes counts per MAG (before clustering with FastANI) colored by phylum (GTDB-Tk2). All CAZy classes (GH, GT, PL, CE, AA and CBMs), along with all their families, were considered for clustering using default values (15 neighbors and Euclidean distance). **b** Taxonomic classification (at the domain and phylum levels), quality (CheckM2), and identification as species or not of the clustered MAGs from the RS and soil metagenomes. The exact order of the missing phylum labels within the **b** plot can be read from the legend on **a**.
 
-> **Figure 2.** Relative **phylum** (**a**, **c**) and **genus** (**b**, **d**) abundance of agglomerated data, generated by Kraken2 coupled to Bracken, for _**Bacteria**_ (**top**) and _**Eukaryota**_ (**bottom**). The displayed abundance is part only of the portion of the reads belonging to each **domain** ( _see_ **Figure 1a** and **Figure S1**). Replicates were merged, and the panels are divided by matrix source. On phylum plots, only phyla with relative abundance above 0.5% are displayed, whilst on genus plots genera above 3% and 2% are depicted for _Bacteria_ and _Eukaryota_, respectively.
+![](images/Fig2.png){style="display: block; margin: 0 auto"}
 
-## Differentially abundant taxa
+> **Fig. 2.** Recovered MAGs from **RS** samples after clustering based on Average Nucleotide Identity (ANI). The visualization includes phylogenetic relationship among them (tree), specific highlighted phylum clades (colored sectors), genus classification (outer text), proportion of the main categories of Cluster of Orthologous Genes (COG) within each MAG (blue-orange-red-green pie chart), Carbon Active EnZyme (CAZyme) class normalized abundance (red scaled heatmap), classification as either high-quality or mid-quality MAG based on checkM2 measurements (blue binary), GUNC test passing (green binary), and genome size in Mbp (outer black bars).The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the score: completeness – 0.5 x contamination. Conventions in CAZyme heatmap: GH glycoside hydrolases, GT glyco-syltransferases, PL polysaccharide lyases, CE carbohydrate esterases, CBMs carbohydrate-binding modules, AA auxiliary activities.
 
-![](images/ANCOM-BC.png){style="display: block; margin: 0 auto"}
+![](images/Fig3.png){style="display: block; margin: 0 auto"}
 
-> **Figure 3.** Selected differentially abundant genera in **rice straw** (**a**) and **soil** (**b**) samples based on Analysis of Compositions of Microbiomes with Bias Correction 2 (ANCOM-BC2). Right: Log2FC of Treatments to Control. Left: Boxplots of selected genera abundance (counts) in log10 scale. All displayed genera exhibit p-value < 0.05 adjusted with Holm–Bonferroni method for multiple comparisons. _Cont0_ and _Cont1_ in rice straw comparisons indicate Control samples at _Time_ 0 and 1, respectively. As a result, rice straw results depict differences throughout time for all treatments including Control. In the case of soil samples, Time 0 and Time 1 were merged for each Treatment since Permutational Analysis of Variance (PERMANOVA) results does not show significant differences for this factor. ANCOM-BC2 was implemented only with Bacteria data, agglomerated at genus level and taxa abundant in at least 0.5% and 0.05% (any sample) for rice straw and soil samples, respectively.
+> **Fig. 3.** Recovered MAGs from **soil** samples after clustering based on Average Nucleotide Identity (ANI). See **Fig. 2** for feature explanation.
 
-# Results Metagenome-Assembled Genome (MAG) recovery
+![](images/Fig4.png){style="display: block; margin: 0 auto"}
 
-## Summary and presence/absence of genera across samples according to GTDB-Tk2 annotation
+> **Fig. 4.** Bubble plot depicting the number of normalized counts for CAZyme families associated with lignocellulose-degrading enzymes found in the MAGs recovered from **RS** samples. Visualization includes: MAG clustering based on normalized CAZyme counts of the selected families, and phylum information (GTDB-Tk2). The classification as MQ MAG or HQ MAG (CheckM2) is designated by the shape in the bubble plot. The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the score: completeness – 0.5 x contamination. Displayed RS MAGs contain at least 30 normalized counts in 5 or more CAZyme families; complete information about normalized CAZyme counts in RS MAGs is found in **Fig. S15**.
 
-![](images/summary_pres_abse_rs.png){style="display: block; margin: 0 auto"}
+![](images/Fig5.png){style="display: block; margin: 0 auto"}
 
-![](images/summary_pres_abse_soil.png){style="display: block; margin: 0 auto"}
+> **Fig. 5.** Bubble plot depicting the number of normalized counts for CAZyme families associated with lignocellulose-degrading enzymes found in the clustered MAGs recovered from **soil** samples. See **Fig. 4** for feature explanation. All soil MAGs are displayed.
 
-> **Figure 4.** Metrics summaries of the MAGs built from **rice straw** (**a**) and **soil** (**c**) samples; the columns represent, in order, the proportion of: mid-quality and high-quality MAGs according to CheckM2 estimations; MAGs passing the GUNC test; and annotated MAGs at different taxonomical levels based on GTDB-Tk2. Presence/absence of MAGs annotated with GTDB-Tk2 in **rice straw** (**b**) **soil** (**d**) samples at **genus** level. Genome size, in Mbp, is indicated as the point size, while the color scale represents the relative abundance of each MAG per sample, and the point shape shows whether the displayed MAG is classified as high-quality or mid-quality (CheckM2). When MAGs with the same genus annotation were found in the same sample, the most complete one is depicted and their abundances are added up.
+![](images/Fig6.png){style="display: block; margin: 0 auto"}
 
-## Cross-referencing of quality metrics, taxonomical annotation, COG estimation and CAZy information for clustered MAGs.
+> **Fig. 6.** Boxplot showing the distribution and abundance of normalized counts for CAZyme families associated with lignocellulose-degrading enzymes found in the MAGs recovered from RS and soil samples.
 
-![](images/iTOL_rs.png){style="display: block; margin: 0 auto"}
+## β‑Glucosidase activity
 
-![](images/iTOL_soil.png){style="display: block; margin: 0 auto"}
+![](images/Fig7.png){style="display: block; margin: 0 auto"}
 
-> **Figure 5.** Recovered MAGs from **rice straw** (**a**) and **soil** (**b**) samples after clustering based on Average Nucleotide Identity (ANI). The visualization includes phylogenetic relationship among them (tree), specific highlighted phylum clades (colored sectors), deepest annotated taxon per bin (tips), genus classification (outer text), _Treatment_ (color strip), _Time_ information (black triangle binary), proportion of the main categories of Cluster of Orthologous Genes (COG) within each MAG (blue-orange-red-green pie chart), Carbon Active EnZyme (CAZy) class normalized abundance (red scaled heatmap), classification as either high-quality or mid-quality MAG based on checkM2 measurements (blue binary), GUNC test passing or not (green binary), and genome size in Mbp (outer black bars).The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the following score: completeness – 0.5 x contamination. Conventions in CAZy heatmap: **GH** glycoside hydrolases, **GT** glyco-syltransferases, **PL** polysaccharide lyases, **CE** carbohydrate esterases, **CBMs** carbohydrate-binding modules, **AA** auxiliary activities.
+> **Fig. 7**. **Left**: bubble plot depicting normalized CAZyme counts for β-glucosidase families (GH1, GH3, GH5 and GH9) per sample; GH glycoside hydrolases. **Right**: data distribution of experimental β-glucosidase activity per sample. The displayed normalized CAZyme values represent the maximum count in a given MAG of each GH family within the sample; treatment colors are shared by both the bubble plot and the boxplot.
 
-## MAG clustering using CAZy information and β-glucosidase activity estimation
+# Supplementary Figures
 
-![](images/beta_glucosidase_MAG_CAZy_exp_bubble.png){style="display: block; margin: 0 auto"}
+## Field experiments
 
-> **Figure 6. a** Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of normalized CAZy enzymes counts per MAG (before clustering with FastANI) colored by phylum (GTDB-Tk2). All CAZy classes (GH, GT, PL, CE, AA and CBMs), along with all their families, were considered for clustering using default values (15 neighbors and Euclidean distance). **b** **Left:** bubble plot depicting normalized CAZy counts for β-glucosidase families (GH1, GH3, GH5 and GH9) per sample; **GH** glycoside hydrolases. **Right:** data distribution for experimental β-glucosidase activity quantified per sample. The point size on the bubble plot represents the maximum value of the counts of each CAZy family per sample, and _Treatment_ colors are shared by both the bubble plot and the boxplot.
+![](images/Fig S1.png){style="display: block; margin: 0 auto"}
 
-## Abundance of CAZy-derived lignocellulose-degrading enzymes per MAG
+> **Fig. S1**. Field diagram of plots and yard distribution, illustrating yard sizing and color plotting distribution on the field. Green dot lines indicate rice furrows without treatment used as a natural barrier between plot treatments. Blank spots represent spaces without treatments due to field irregular terrain impeding a treatment application. Arrow indicates magnetic north.
 
-![](images/cazy_all_cellulases_mags_clustered_rs.png){style="display: block; margin: 0 auto"}
+![](images/Fig S2a.png){style="display: block; margin: 0 auto"}
 
-![](images/cazy_all_cellulases_mags_clustered_soil.png){style="display: block; margin: 0 auto"}
+![](images/Fig S2b.png){style="display: block; margin: 0 auto"}
 
-> **Figure 7.** Bubble plot depicting the number of normalized counts for CAZy families associated with lignocellulose-degrading enzymes found in the MAGs recovered from **rice straw** (**top**) and **soil** (**bottom**) samples. Visualization includes (from left to right): MAG clustering using the CAZy counts of the selected families, _Treatment_ origin of the MAG, phylum information (GTDB-Tk2), _Time_ (0: initial, 1: after 30 days of Treatment). The classification as mid-quality or high-quality MAG (CheckM2) is represented by the shape in the bubble plot. The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the following score: completeness – 0.5 x contamination. Additionally, for **rice straw**, MAGs were filtered considering only the ones with at least 3000 normalized counts in 5 or more CAZy families; complete information about normalized counts of these MAGs is found in **figure S4**.
+> **Fig. S2**. Illustration of sampling points for soil and straw for physicochemical and enzymatic analysis on field. **A** shows the distribution of soil sampling points within each plot; **B** depicts the distribution of rice straw sampling points within each plot; **C** displays a field picture showing the marks used for the replicas and color code per treatment: pink represents Cont plots, blue FBa plots, yellow FBaNit plots, and violet FCent plots; **D** presents RS manual collection; **E** exemplifies a tube probe for soil sampling; and **F**,**G** exhibit soil sample disposal in marked Ziploc® bags.
 
-# Supplementary Material
+## Soil parameters
 
-## Percentage of annotated reads with Kraken2/Bracken
+![](images/Fig S3.png){style="display: block; margin: 0 auto"}
 
-![](images/perc_annotation_reads_all.png){style="display: block; margin: 0 auto"}
+> **Fig. S3**. Experimental measures of physicochemical parameters in soil samples including total carbon, total nitrogen, pH and phosphorus. The data were normalized using the Min-Max method to adjust the raw values to the same scale; the displayed numbers represent the mean of the quantified parameter per sample.
 
-> **Figure S1.** Percentage of annotated reads using Kraken2/Bracken segmented by matrix and time point. For rice straw at _Time_ 0 samples were taken from a bulk of material; this same bulk was subsampled with specific amounts of rice straw to start the experiments, and hence accounting with only 1 sample at _Time_ 0.
+## Enzymatic activity
 
-## Quality control with mock community
+![](images/Fig S4.png){style="display: block; margin: 0 auto"}
 
-![](images/krona_mock_community.png){style="display: block; margin: 0 auto"}
+> **Fig. S4**. Experimental protease, acid, and alkaline phosphatase activities of rice straw (**a**) and soil (**b**) samples. The enzymatic activity was measured according to the guidelines established by Alef & Nannipieri (1995).
 
-> **Figure S2.** Krona plot displaying the taxonomical classification and relative abundance, performed with Kraken2 coupled to Bracken, of the reads belonging to the **mock community** sequenced as part of quality control for the DNA extraction process.
+## Reference-based analysis
 
-## GTDB taxonomy of rice straw MAGs
+![](images/Fig S5.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S5**. Screenshot of a Krona plot displaying the taxonomic classification and relative abundance, performed with Kraken2 coupled to Bracken, of the reads belonging to the mock community sequenced as part of quality control for the DNA extraction process.
+
+![](images/Fig S6.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S6**. Taxonomic profiling of the sequences using Kraken2 coupled to Bracken: **a** Relative domain abundance per matrix source, merging all the replicates per sample. **b** α-Diversity, colored by treatment, measured through Shannon and Inverse Simpson indices. **c** Sample ordination through Principal Coordinate Analysis (PCoA) using a Bray-Curtis dissimilarity matrix as input. The ellipses represent 95% confidence regions around the centroids of each group calculated by the assumption of multivariate t-distribution. **d** Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of β-Diversity estimation of the samples based on the Aitchison distance. **e** Compositional variability of the samples, measured as distance to the centroid in a multivariate space computed with the Aitchison distance among samples. ANOVA analysis results show no significant differences in terms of group dispersion. **f** Proportion of the variance explained by the factors Time and Treatment, segmented by matrix source, in Permutational Analysis of Variance (PERMANOVA) implemented according to different distance/dissimilarity metrics; the significance of each factor is determined by the symbol color. **g** Selected differentially abundant genera in RS samples based on Analysis of Compositions of Microbiomes with Bias Correction 2 (ANCOM-BC2). Right: log2FC of treatments to Cont, and left: Boxplots of selected genera abundance (counts) in log10 scale. All displayed genera exhibit p-value < 0.05 adjusted with Holm–Bonferroni method for multiple comparisons. Cont0 and Cont1 in RS comparisons indicate Cont samples at time 0 and 1, respectively. Differences throughout time for all treatments against Cont samples at time 0 are shown. All the analysis from **b** to **f** were carried out only with Bacteria data and normalized counts as Counts per million (CPM). The treatment colors are transversal to plots **b**, **c**, **d**, **e**, **f** and **g**. ANCOM-BC2 was implemented with agglomerated data at genus level, and with the most abundant taxa (> 0.5%).
+
+![](images/Fig S7.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S7**. Percentage of annotated reads using Kraken2/Bracken segmented by matrix and time point. For rice straw at time 0 samples were taken from a bulk of material; this same bulk was subsampled with specific amounts of rice straw to start the experiments, and hence accounting with only 1 sample at time 0.
+
+![](images/Fig S8.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S8**. Relative phylum (**a**, **c**) and genus (**b**, **d**) abundance of agglomerated data (Bacteria, top; Eukaryota, bottom). Displaying abundance values that belong to the portion of the reads annotated in each domain (see **Fig. S6a** and **Fig. S7**). Replicates were merged, and the panels are split by matrix source. On phylum plots, only phyla with relative abundance above 0.5% are displayed, whilst on genus plots genera above 3% and 2% are depicted for Bacteria and Eukaryota, respectively.
+
+![](images/Fig S9.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S9**. Relative genus abundance of agglomerated **RS** data with panels split by treatment. Only genera with relative abundance above 3% are displayed.
+
+## MAG reconstruction
+
+![](images/Fig S10.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S10**. Metrics summaries of the MAGs built from RS (**a**) and soil (**b**) samples; the columns represent, in order, the proportion of: mid-quality and high-quality MAGs according to CheckM2 estimations; MAGs passing the GUNC test; and annotated MAGs at different taxonomic levels based on GTDB-Tk2.
+
+![](images/Fig S11.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S11**. Presence/absence of MAGs annotated with GTDB-Tk2 in **RS** samples at genus level. Genome size, in Mbp, is indicated as the point size, while the color scale represents the relative abundance of each MAG per sample, and the point shape shows whether the displayed MAG is classified as high-quality or mid-quality (CheckM2). When MAGs with the same genus annotation were found in the same sample, the most complete one is depicted and their abundances are added up.
+
+![](images/Fig S12.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S12**. Presence/absence of MAGs annotated with GTDB-Tk2 in **soil** samples at genus level. Genome size, in Mbp, is indicated as the point size, while the color scale represents the relative abundance of each MAG per sample, and the point shape shows whether the displayed MAG is classified as high-quality or mid-quality (CheckM2). When MAGs with the same genus annotation were found in the same sample, the most complete one is depicted and their abundances are added up.
+
+## MAGs and CAZyme information
+
+![](images/Fig S13a.png){style="display: block; margin: 0 auto"}
+
+![](images/Fig S13b.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S13**. Circos plots showing the proportion of the 4 main categories (Metabolism; Information Storage and Processing; Cellular Processes and Signaling; and Protein Coding Sequences with Unknown function) of Clusters of Orthologous Genes (COGs) found within the MAGs recovered from **RS** (**top**) and **soil** (**bottom**) the samples. The inner ring accounts for the total number of COGs related to every sample or COG category; the outer ring depicts the relative abundance of COGs from each sample or COG category; the width of the ribbons linking any sample and a COG category depicts their relative abundance to each other. The number of counts per category was normalized using the total number of genes found per MAG.
+
+![](images/Fig S14.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S14**. Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of normalized CAZy enzymes counts per MAG (before clustering with FastANI) colored by treatment and shape by the time in which the MAGs were recovered.
+
+![](images/Fig S15.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S15**. Clustered MAGs recovered from **RS* samples and their normalized counts for CAZy families associated with lignocellulose-degrading enzymes.The organization of the tree relies on the phylogenetic information retrieved from GTDB-Tk2. The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the following score: completeness – 0.5 x contamination.
+
+# Supplementary Tables
+
+## GTDB taxonomy of RS MAGs
 
 ```{r table_rs, echo=FALSE}
 library(knitr)
@@ -230,27 +281,3 @@ table_soil %>%
   kable_styling(bootstrap_options = c("striped", "hover")) %>% 
   scroll_box(width = "800px", height = "500px")
 ```
-
-## Cluster of Orthologous Genes (COG) annotation
-
-![](images/Circos.png){style="display: block; margin: 0 auto"}
-
-> **Figure S3.** Circos plots showing the proportion of the 4 main categories (**Metabolism**; **Information** Storage and Processing; **Cellular** Processes and Signaling; and Protein Coding Sequences with **Unknown** function) of Clusters of Orthologs Genes (COGs) found within the MAGs recovered from **rice straw** (**a**) and **soil** (**b**) the samples. The inner ring accounts for the total number of COGs related to every sample or COG category; the outer ring depicts the relative abundance of COGs from each sample or COG category; the width of the ribbons linking any sample and a COG category depicts their relative abundance to each other. The number of counts per category was normalized using the total number of genes found per MAG.
-
-## Cellulose-related CAZymes found within all MAGs in rice straw
-
-![](images/iTOL_cellulases_all_rs.png){style="display: block; margin: 0 auto"}
-
-> **Figure S4.** Clustered MAGs recovered from **rice straw** samples and their normalized counts for CAZy families associated with lignocellulose-degrading enzymes.The organization of the tree relies on the phylogenetic information retrieved from GTDB-Tk2. The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the following score: completeness – 0.5 x contamination.
-
-## Enzymatic activity of the different samples
-
-![](images/enzymatic_activity.png){style="display: block; margin: 0 auto"}
-
-> **Figure S5.** Experimental protease, acid and alkaline phosphatase activities of **rice straw** (**a**) and **soil** (**b**) samples. The enzymatic activity was measured according to the guidelines established by Alef & Nannipieri (1995).
-
-## Physicochemical parameters of soil samples
-
-![](images/physicochemical_data_ss.png){style="display: block; margin: 0 auto"}
-
-> **Figure S6.** Experimental measures of physicochemical parameters in **soil** samples including total **Carbon**, total **Nitrogen**, **pH** and **phosphorus**. The data were normalized using z-score to adjust the raw values to the same scale; the displayed numbers represent the mean of the quantified parameter per sample.
