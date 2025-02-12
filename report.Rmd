@@ -64,7 +64,7 @@ This contribution underscores the possibility of promoting RS degradation throug
 ![](images/mag_workflow.png){style="display: block; margin: 0 auto"}
 
 
-# Results MAG recovery
+# Results
 
 ## MAGs and CAZyme information
 
