@@ -115,13 +115,13 @@ This contribution underscores the possibility of promoting RS degradation throug
 
 ![](images/Fig S3.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S3**. Experimental measures of physicochemical parameters in soil samples including total carbon, total nitrogen, pH and phosphorus. The data were normalized using the Min-Max method to adjust the raw values to the same scale; the displayed numbers represent the mean of the quantified parameter per sample.
+> **Fig. S3**. Experimental measures of physicochemical parameters in **soil** samples including total carbon, total nitrogen, pH and phosphorus. The data were normalized using the Min-Max method to adjust the raw values to the same scale; the displayed numbers represent the mean of the quantified parameter per sample.
 
 ## Enzymatic activity
 
 ![](images/Fig S4.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S4**. Experimental protease, acid, and alkaline phosphatase activities of rice straw (**a**) and soil (**b**) samples. The enzymatic activity was measured according to the guidelines established by Alef & Nannipieri (1995).
+> **Fig. S4**. Experimental protease, acid, and alkaline phosphatase activities of **RS** (**a**) and **soil** (**b**) samples. The enzymatic activity was measured according to the guidelines established by Alef & Nannipieri (1995).
 
 ## Reference-based analysis
 
@@ -135,11 +135,11 @@ This contribution underscores the possibility of promoting RS degradation throug
 
 ![](images/Fig S7.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S7**. Percentage of annotated reads using Kraken2/Bracken segmented by matrix and time point. For rice straw at time 0 samples were taken from a bulk of material; this same bulk was subsampled with specific amounts of rice straw to start the experiments, and hence accounting with only 1 sample at time 0.
+> **Fig. S7**. Percentage of annotated reads using Kraken2/Bracken segmented by matrix and time point. For RS at time 0 samples were taken from a bulk of material; this same bulk was subsampled with specific amounts of rice straw to start the experiments, and hence accounting with only 1 sample at time 0.
 
 ![](images/Fig S8.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S8**. Relative phylum (**a**, **c**) and genus (**b**, **d**) abundance of agglomerated data (Bacteria, top; Eukaryota, bottom). Displaying abundance values that belong to the portion of the reads annotated in each domain (see **Fig. S6a** and **Fig. S7**). Replicates were merged, and the panels are split by matrix source. On phylum plots, only phyla with relative abundance above 0.5% are displayed, whilst on genus plots genera above 3% and 2% are depicted for Bacteria and Eukaryota, respectively.
+> **Fig. S8**. Relative **phylum** (**a**, **c**) and **genus** (**b**, **d**) abundance of agglomerated data (Bacteria, top; Eukaryota, bottom). Displaying abundance values that belong to the portion of the reads annotated in each domain (see **Fig. S6a** and **Fig. S7**). Replicates were merged, and the panels are split by matrix source. On phylum plots, only phyla with relative abundance above 0.5% are displayed, whilst on genus plots genera above 3% and 2% are depicted for Bacteria and Eukaryota, respectively.
 
 ![](images/Fig S9.png){style="display: block; margin: 0 auto"}
 
@@ -173,7 +173,7 @@ This contribution underscores the possibility of promoting RS degradation throug
 
 ![](images/Fig S15.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S15**. Clustered MAGs recovered from **RS* samples and their normalized counts for CAZy families associated with lignocellulose-degrading enzymes.The organization of the tree relies on the phylogenetic information retrieved from GTDB-Tk2. The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the following score: completeness – 0.5 x contamination.
+> **Fig. S15**. Clustered MAGs recovered from **RS** samples and their normalized counts for CAZy families associated with lignocellulose-degrading enzymes.The organization of the tree relies on the phylogenetic information retrieved from GTDB-Tk2. The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the following score: completeness – 0.5 x contamination.
 
 # Supplementary Tables
 
