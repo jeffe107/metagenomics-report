@@ -32,10 +32,10 @@ Correspondence should be addressed to L.F (laurent.falquet@unifr.ch)
 # Abstract
 
 <p style='text-align: justify;'>**Background**
-Rice is one of the top three crops that contribute 60% of the calories consumed by humans worldwide. Nonetheless, extensive rice harvesting yields more than 800 tons of rice straw (RS) per year globally, generating a byproduct that is often difficult for farmers to manage efficiently without burning it. As a result, millions of tons of carbon dioxide and greenhouse gases are released, causing issues such as respiratory problems, soil degradation and global warming. In this work, we explore the biological decomposition of RS through the application of microbial consortia from a metagenomics perspective.</p>
+Rice is one of the top three crops that contribute 60% of the calories consumed by humans worldwide. Nonetheless, extensive rice harvesting yields more than 800 millions tons of rice straw (RS) per year globally, generating a byproduct that is often difficult for farmers to manage efficiently without burning it. As a result, millions of tons of carbon dioxide and greenhouse gases are released, causing issues such as respiratory problems, soil degradation and global warming. In this work, we explore the biological decomposition of RS through the application of microbial consortia from a metagenomics perspective.</p>
 
 <p style='text-align: justify;'>**Results**
-We applied different treatments to RS placed in a mulching setup during experiments carried out in Colombian rice fields, using various combinations of a Trichoderma-based commercial product, the bacterial strain Bacillus altitudinis, organic nitrogen, and a mixture of potassium-reducing organic acids. Before inoculation and after 30 days of treatment, we characterized the microbial community on the surface of the material and from the bulk soil by performing a reference-based compositional analysis, and reconstructing and functionally annotating Metagenome-Assembled Genomes (MAGs). High-quality MAGs with great potential to decompose RS, represented by the extensive number of carbohydrate-active enzymes, were recovered. Soil MAGs taxonomic classification indicates that they may represent potential novel microbial taxa, while the main part of the RS MAGs with superior lignocellulose-degrading capacity were affiliated under Actinomycetota and Bacteroidota phyla. Moreover, the biotransformation capacity of the MAGs was indirectly verified by quantifying β-glucosidase activity of the samples they were extracted from, and an improvement on the action of this enzyme was detected, suggesting cellulose degradation by the native microbiota possibly triggered by Trichoderma sp.</p>
+We applied different treatments to RS placed in a mulching setup during experiments carried out in Colombian rice fields, using various combinations of a Trichoderma-based commercial product, the bacterial strain Bacillus altitudinis IBUN 2717, organic nitrogen, and a mixture of potassium-reducing organic acids. Before inoculation and after 30 days of treatment, we characterized the microbial community on the surface of RS and from the bulk soil by performing a reference-based compositional analysis, and reconstructing and functionally annotating Metagenome-Assembled Genomes (MAGs). High-quality MAGs with great potential to decompose RS, represented by the extensive number of carbohydrate-active enzymes, were recovered. Soil MAGs taxonomic classification indicates that they may represent potential novel microbial taxa, while the main part of the RS MAGs with superior lignocellulose-degrading capacity were affiliated under Actinomycetota and Bacteroidota phyla. Moreover, the biotransformation capacity of the MAGs was indirectly verified by quantifying β-glucosidase activity of the samples they were extracted from, and an improvement on the action of this enzyme was detected, suggesting cellulose degradation by the native microbiota possibly triggered by Trichoderma sp.</p>
 
 <p style='text-align: justify;'>**Conclusions**
 This contribution underscores the possibility of promoting RS degradation through biological strategies by the activation of native microorganisms. Further, the newly unveiled MAGs with high RS-degrading potential provide a valuable resource for exploring the functional potential of previously uncharacterized microbial diversity in Colombian agricultural ecosystems, including microorganisms that have not been previously reported as remarkable lignocellulose decomposers.<p style='text-align: justify;'>
@@ -67,33 +67,33 @@ This contribution underscores the possibility of promoting RS degradation throug
 
 ## MAGs and CAZyme information
 
-![](images/Fig1.png){style="display: block; margin: 0 auto"}
+![](images/Fig2.png){style="display: block; margin: 0 auto"}
 
 > **Fig. 2. a** Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of normalized CAZy enzymes counts per MAG (before clustering with FastANI) colored by phylum (GTDB-Tk2). All CAZy classes (GH, GT, PL, CE, AA and CBMs), along with all their families, were considered for clustering using default values (15 neighbors and Euclidean distance). **b** Taxonomic classification (at the domain and phylum levels), quality (CheckM2), and identification as species or not of the clustered MAGs from the RS and soil metagenomes. The exact order of the missing phylum labels within the **b** plot can be read from the legend on **a**.
 
-![](images/Fig2.png){style="display: block; margin: 0 auto"}
+![](images/Fig3.png){style="display: block; margin: 0 auto"}
 
 > **Fig. 3.** Recovered MAGs from **RS** samples after clustering based on Average Nucleotide Identity (ANI). The visualization includes phylogenetic relationship among them (tree), specific highlighted phylum clades (colored sectors), genus classification (outer text), proportion of the main categories of Cluster of Orthologous Genes (COG) within each MAG (blue-orange-red-green pie chart), Carbon Active EnZyme (CAZyme) class normalized abundance (red scaled heatmap), classification as either high-quality or mid-quality MAG based on checkM2 measurements (blue binary), GUNC test passing (green binary), and genome size in Mbp (outer black bars).The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the score: completeness – 0.5 x contamination. Conventions in CAZyme heatmap: GH glycoside hydrolases, GT glyco-syltransferases, PL polysaccharide lyases, CE carbohydrate esterases, CBMs carbohydrate-binding modules, AA auxiliary activities.
 
-![](images/Fig3.png){style="display: block; margin: 0 auto"}
+![](images/Fig4.png){style="display: block; margin: 0 auto"}
 
 > **Fig. 4.** Recovered MAGs from **soil** samples after clustering based on Average Nucleotide Identity (ANI). See **Fig. 3** for feature explanation.
 
-![](images/Fig4.png){style="display: block; margin: 0 auto"}
+![](images/Fig5.png){style="display: block; margin: 0 auto"}
 
 > **Fig. 5.** Bubble plot depicting the number of normalized counts for CAZyme families associated with lignocellulose-degrading enzymes found in the MAGs recovered from **RS** samples. Visualization includes: MAG clustering based on normalized CAZyme counts of the selected families, and phylum information (GTDB-Tk2). The classification as MQ MAG or HQ MAG (CheckM2) is designated by the shape in the bubble plot. The displayed MAGs are representatives from the generated clusters using ANI, and they were selected based on the score: completeness – 0.5 x contamination. Displayed RS MAGs contain at least 30 normalized counts in 5 or more CAZyme families; complete information about normalized CAZyme counts in RS MAGs is found in **Fig. S15**.
 
-![](images/Fig5.png){style="display: block; margin: 0 auto"}
+![](images/Fig6.png){style="display: block; margin: 0 auto"}
 
 > **Fig. 6.** Bubble plot depicting the number of normalized counts for CAZyme families associated with lignocellulose-degrading enzymes found in the clustered MAGs recovered from **soil** samples. See **Fig. 5** for feature explanation. All soil MAGs are displayed.
 
-![](images/Fig6.png){style="display: block; margin: 0 auto"}
+![](images/Fig7.png){style="display: block; margin: 0 auto"}
 
 > **Fig. 7.** Boxplot showing the distribution and abundance of normalized counts for CAZyme families associated with lignocellulose-degrading enzymes found in the MAGs recovered from RS and soil samples.
 
 ## β‑Glucosidase activity
 
-![](images/Fig7.png){style="display: block; margin: 0 auto"}
+![](images/Fig8.png){style="display: block; margin: 0 auto"}
 
 > **Fig. 8**. **Left:** bubble plot depicting normalized CAZyme counts for β-glucosidase families (GH1, GH3, GH5 and GH9) per sample; GH glycoside hydrolases. **Right:** data distribution of experimental β-glucosidase activity per sample. The displayed normalized CAZyme values represent the maximum count in a given MAG of each GH family within the sample; treatment colors are shared by both the bubble plot and the boxplot.
 
