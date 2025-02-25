@@ -89,13 +89,13 @@ This contribution underscores the possibility of promoting RS degradation throug
 
 ![](images/Fig7.png){style="display: block; margin: 0 auto"}
 
-> **Fig. 7.** Boxplot showing the distribution and abundance of normalized counts for CAZyme families associated with lignocellulose-degrading enzymes found in the MAGs recovered from RS and soil samples.
+> **Fig. 7.** Boxplot showing the distribution and abundance of normalized counts for CAZyme families associated with lignocellulose-degrading enzymes found in the MAGs recovered from RS and soil samples. Values displayed are the cumulative sum of each CAZyme family within a determined sample, normalized by the number of coding sequences found in the sample.
 
 ## β‑Glucosidase activity
 
 ![](images/Fig8.png){style="display: block; margin: 0 auto"}
 
-> **Fig. 8**. **Left:** bubble plot depicting normalized CAZyme counts for β-glucosidase families (GH1, GH3, GH5 and GH9) per sample; GH glycoside hydrolases. **Right:** data distribution of experimental β-glucosidase activity per sample. The displayed normalized CAZyme values represent the maximum count in a given MAG of each GH family within the sample; treatment colors are shared by both the bubble plot and the boxplot.
+> **Fig. 8**. **Left:** bubble plot depicting normalized CAZyme counts for β-glucosidase families (GH1, GH3, GH5 and GH9) per sample; GH glycoside hydrolases. **Right:** data distribution of experimental β-glucosidase activity per sample. Values displayed on the left are the cumulative sum of each CAZyme family within a determined sample, normalized by the number of coding sequences found in the sample; treatment colors are shared by both the bubble plot and the boxplot.
 
 # Supplementary Figures
 
