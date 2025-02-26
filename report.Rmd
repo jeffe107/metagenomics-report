@@ -183,6 +183,15 @@ This contribution underscores the possibility of promoting RS degradation throug
 
 > **Fig. S17**. Unclustered MAGs recovered from **soil** samples and their normalized counts for CAZy families associated with β-glucosidases. See **Fig. S16** for feature explanation.
 
+![](images/Fig S18.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S18**. Bubble plot depicting the number of normalized counts for CAZyme families associated with β-glucosidases found in the MAGs recovered from samples **FBaNit1** in soil. Visualization includes: MAG clustering based on normalized CAZyme counts of the selected families, and phylum information (GTDB-Tk2).
+
+![](images/Fig S19.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S19**. Bubble plot depicting the number of normalized counts for CAZyme families associated with β-glucosidases found in the MAGs recovered from samples **Cont1** in soil. Visualization includes: MAG clustering based on normalized CAZyme counts of the selected families, and phylum information (GTDB-Tk2).
+
+
 # Supplementary Tables
 
 ## GTDB taxonomy of RS MAGs
