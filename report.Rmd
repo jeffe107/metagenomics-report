@@ -133,17 +133,17 @@ This contribution underscores the possibility of promoting RS degradation throug
 
 > **Fig. S6**. Taxonomic profiling of the sequences using Kraken2 coupled to Bracken: **a** Relative domain abundance per matrix source, merging all the replicates per sample. **b** α-Diversity, colored by treatment, measured through Shannon and Inverse Simpson indices. **c** Sample ordination through Principal Coordinate Analysis (PCoA) using a Bray-Curtis dissimilarity matrix as input. The ellipses represent 95% confidence regions around the centroids of each group calculated by the assumption of multivariate t-distribution. **d** Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of β-Diversity estimation of the samples based on the Aitchison distance. **e** Compositional variability of the samples, measured as distance to the centroid in a multivariate space computed with the Aitchison distance among samples. ANOVA analysis results show no significant differences in terms of group dispersion. **f** Proportion of the variance explained by the factors Time and Treatment, segmented by matrix source, in Permutational Analysis of Variance (PERMANOVA) implemented according to different distance/dissimilarity metrics; the significance of each factor is determined by the symbol color. **g** Selected differentially abundant genera in RS samples based on Analysis of Compositions of Microbiomes with Bias Correction 2 (ANCOM-BC2). **Left:** log<sub>2</sub>FC of treatments to *Cont0*, and **Right:** Boxplots of selected genera abundance (counts) in log<sub>10</sub> scale. All displayed genera exhibit p-value < 0.05 adjusted with Holm–Bonferroni method for multiple comparisons. *Cont0* and *Cont1* in RS comparisons indicate Cont samples at time 0 and 1, respectively. Differences throughout time for all treatments against Cont samples at time 0 are shown. All the analysis from **b** to **f** were carried out only with Bacteria data and normalized counts as Counts per million (CPM). The treatment colors are transversal to plots **b**, **c**, **d**, **e**, **f** and **g**. ANCOM-BC2 was implemented with agglomerated data at genus level, and with the most abundant taxa (> 0.5%).
 
-![](images/Fig S7.png){style="display: block; margin: 0 auto"}
-
-> **Fig. S7**. Percentage of annotated reads using Kraken2/Bracken segmented by matrix and time point. For RS at time 0 samples were taken from a bulk of material; this same bulk was subsampled with specific amounts of rice straw to start the experiments, and hence accounting with only 1 sample at time 0.
-
 ![](images/Fig S8.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S8**. Relative **phylum** (**a**, **c**) and **genus** (**b**, **d**) abundance of agglomerated data (Bacteria, top; Eukaryota, bottom). Displaying abundance values that belong to the portion of the reads annotated in each domain (see **Fig. S6a** and **Fig. S7**). Replicates were merged, and the panels are split by matrix source. On phylum plots, only phyla with relative abundance above 0.5% are displayed, whilst on genus plots genera above 3% and 2% are depicted for Bacteria and Eukaryota, respectively.
+> **Fig. S7**. Relative **phylum** (**a**, **c**) and **genus** (**b**, **d**) abundance of agglomerated data (Bacteria, top; Eukaryota, bottom). Displaying abundance values that belong to the portion of the reads annotated in each domain (see **Fig. S6a** and **Fig. S7**). Replicates were merged, and the panels are split by matrix source. On phylum plots, only phyla with relative abundance above 0.5% are displayed, whilst on genus plots genera above 3% and 2% are depicted for Bacteria and Eukaryota, respectively.
 
 ![](images/Fig S9.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S9**. Relative genus abundance of agglomerated **RS** data with panels split by treatment. Only genera with relative abundance above 3% are displayed.
+> **Fig. S8**. Relative genus abundance of agglomerated **RS** data with panels split by treatment. Only genera with relative abundance above 3% are displayed.
+
+![](images/Fig S7.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S9**. Percentage of annotated reads using Kraken2/Bracken segmented by matrix and time point. For RS at time 0 samples were taken from a bulk of material; this same bulk was subsampled with specific amounts of rice straw to start the experiments, and hence accounting with only 1 sample at time 0.
 
 ## MAG reconstruction
 
@@ -151,25 +151,26 @@ This contribution underscores the possibility of promoting RS degradation throug
 
 > **Fig. S10**. Metrics summaries of the MAGs built from **RS** (**a**) and **soil** (**b**) samples; the columns represent, in order, the proportion of: mid-quality and high-quality MAGs according to CheckM2 estimations; MAGs passing the GUNC test; and annotated MAGs at different taxonomic levels based on GTDB-Tk2.
 
-![](images/Fig S11.png){style="display: block; margin: 0 auto"}
+![](images/Fig S14.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S11**. Presence/absence of MAGs annotated with GTDB-Tk2 in **RS** samples at genus level. Genome size, in Mbp, is indicated as the point size, while the color scale represents the relative abundance of each MAG per sample, and the point shape shows whether the displayed MAG is classified as high-quality or mid-quality (CheckM2). When MAGs with the same genus annotation were found in the same sample, the most complete one is depicted and their abundances are added up.
+> **Fig. S11**. Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of normalized CAZy enzymes counts per MAG (before clustering with FastANI) colored by treatment and shape by the time in which the MAGs were recovered.
 
-![](images/Fig S12.png){style="display: block; margin: 0 auto"}
-
-> **Fig. S12**. Presence/absence of MAGs annotated with GTDB-Tk2 in **soil** samples at genus level. Genome size, in Mbp, is indicated as the point size, while the color scale represents the relative abundance of each MAG per sample, and the point shape shows whether the displayed MAG is classified as high-quality or mid-quality (CheckM2). When MAGs with the same genus annotation were found in the same sample, the most complete one is depicted and their abundances are added up.
-
-## MAGs and CAZyme information
 
 ![](images/Fig S13a.png){style="display: block; margin: 0 auto"}
 
 ![](images/Fig S13b.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S13**. Circos plots showing the proportion of the 4 main categories (Metabolism; Information Storage and Processing; Cellular Processes and Signaling; and Protein Coding Sequences with Unknown function) of Clusters of Orthologous Genes (COGs) found within the MAGs recovered from **RS** (**top**) and **soil** (**bottom**) the samples. The inner ring accounts for the total number of COGs related to every sample or COG category; the outer ring depicts the relative abundance of COGs from each sample or COG category; the width of the ribbons linking any sample and a COG category depicts their relative abundance to each other. The number of counts per category was normalized using the total number of genes found per MAG.
+> **Fig. S12**. Circos plots showing the proportion of the 4 main categories (Metabolism; Information Storage and Processing; Cellular Processes and Signaling; and Protein Coding Sequences with Unknown function) of Clusters of Orthologous Genes (COGs) found within the MAGs recovered from **RS** (**top**) and **soil** (**bottom**) the samples. The inner ring accounts for the total number of COGs related to every sample or COG category; the outer ring depicts the relative abundance of COGs from each sample or COG category; the width of the ribbons linking any sample and a COG category depicts their relative abundance to each other. The number of counts per category was normalized using the total number of genes found per MAG.
 
-![](images/Fig S14.png){style="display: block; margin: 0 auto"}
+![](images/Fig S11.png){style="display: block; margin: 0 auto"}
 
-> **Fig. S14**. Two-dimensional Uniform Manifold Approximation and Projection (UMAP) embedding of normalized CAZy enzymes counts per MAG (before clustering with FastANI) colored by treatment and shape by the time in which the MAGs were recovered.
+> **Fig. S13**. Presence/absence of MAGs annotated with GTDB-Tk2 in **RS** samples at genus level. Genome size, in Mbp, is indicated as the point size, while the color scale represents the relative abundance of each MAG per sample, and the point shape shows whether the displayed MAG is classified as high-quality or mid-quality (CheckM2). When MAGs with the same genus annotation were found in the same sample, the most complete one is depicted and their abundances are added up.
+
+![](images/Fig S12.png){style="display: block; margin: 0 auto"}
+
+> **Fig. S14**. Presence/absence of MAGs annotated with GTDB-Tk2 in **soil** samples at genus level. Genome size, in Mbp, is indicated as the point size, while the color scale represents the relative abundance of each MAG per sample, and the point shape shows whether the displayed MAG is classified as high-quality or mid-quality (CheckM2). When MAGs with the same genus annotation were found in the same sample, the most complete one is depicted and their abundances are added up.
+
+## MAGs and CAZyme information
 
 ![](images/Fig S15.png){style="display: block; margin: 0 auto"}
 
