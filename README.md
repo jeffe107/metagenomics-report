@@ -4,6 +4,8 @@
 
 Repository containing a github-pages website to display the paper figures in a different format. The website is available [here](https://jeffe107.github.io/metagenomics-report/) and you can learn more about our project with this [video](https://www.youtube.com/watch?v=xxSlu5Gj-zo).
 
+[https://www.youtube.com/watch?v=xxSlu5Gj-zo](https://www.youtube.com/watch?v=xxSlu5Gj-zo)
+
 ## Abstract
 
 <p align="center">
