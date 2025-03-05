@@ -5,3 +5,7 @@
 Repository containing a github-pages website to display the paper figures in a different format. The website is available [here](https://jeffe107.github.io/metagenomics-report/)
 
 ## Abstract
+
+<p align="center">
+    <img src="images/graphical_abstract.png" alt="Abstract" width="50%">
+</p>
