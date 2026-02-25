@@ -7,5 +7,5 @@ Repository containing a github-pages website to display the paper figures in a d
 ## Abstract
 
 <p align="center">
-    <img src="images/graphical_abstract.png" alt="Abstract" width="50%">
+    <img src="images/MAGs_abstract.png" alt="Abstract" width="50%">
 </p>
